@@ -1,6 +1,6 @@
 {
-  "name": "wavesurfer",
-  "version": "0.0.0",
+  "name": "angular-wavesurfer-service-project",
+  "version": "1.1.7",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
