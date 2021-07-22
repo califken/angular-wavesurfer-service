@@ -49,6 +49,9 @@ Once installed, you can use the included <b>wavesurfer</b> click-to-play compone
 ### Wavesurfer Options
 You can pass an options object to the Wavesurfer component to adjust parameters of the player.  See [Wavesurfer Options](https://wavesurfer-js.org/docs/options.html) on the Wavesurfer site for a more detailed explanation of each option.
 
+You can also experiment with several of the WaveSurfer parameters using the 
+[Wavesurfer Config Playground](https://wavesurferconfigplayground.web.app/).
+
 This service currently supports the following options:
 
     container: string
@@ -129,8 +132,16 @@ All rendered waveforms are click-to-play.
 ### Global Media Control Service
 When playing any waveform rendererd with this service, all other players instantiated by this service will stop.  This is made possible by an included Globa Media Control Service RXJS behavior subject that the components listen to for notification to stop when another player is going to play.
 
+## Projects
+
+### Spleeter Online -  [spleeter.online](https://spleeter.online) 
+Spleeter Online extracts the vocal stem from any mp3 or wav file.  The service is an interface to Deezer's Spleeter stem separation library that uses Tensorflow with pretrained models written in Python.
+
+### Submit a project
+If you have a project that you would like included in this list, please open an issue, submit a pull request or contact me at kennethmfire@gmail.com.
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-# License
+## License
 This work is licensed under a [BSD 3-Clause License](https://opensource.org/licenses/BSD-3-Clause).
