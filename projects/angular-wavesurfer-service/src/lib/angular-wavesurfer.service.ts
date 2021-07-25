@@ -27,7 +27,6 @@ export class AngularWavesurferService {
       this.thisuuid = wavesurferOptions.container;
     }
     Promise.resolve(null).then(() => {
-      console.log(trackurl);
       this.wsOptions = {
         container: `#${this.thisuuid}`,
         backgroundColor: 'transparent',

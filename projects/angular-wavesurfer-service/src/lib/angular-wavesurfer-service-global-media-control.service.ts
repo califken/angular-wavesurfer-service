@@ -9,7 +9,6 @@ export class GlobalMediaControlService {
   public playbackCommand$ = this.playbackCommandSrc.asObservable();
 
   constructor() {
-    console.log(11);
     this.playbackCommand$.subscribe(console.log);
     this.stopAll();
   }
