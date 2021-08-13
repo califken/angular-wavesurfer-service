@@ -41,8 +41,32 @@ You will need to add the following compiler option to your application's tsconfi
 
 ## Usage
 
-### Wavesurfer Component
-Once installed, you can use the included <b>wavesurfer</b> click-to-play component anywhere in your app.  It requires a URL to an audio file.  Be sure to add the single quotes within the double quotes, if the track URL is not bound to a variable.
+### WaveService: a Simple WaveSurfer Service
+Inject the WaveService in your constructor, and assign the object returned by the create() function to a variable for a full WaveSurfer object.  
+
+The create function requires a WaveSurfer configuration object with at least the *container* property set to an existing element's selector.  See Wavesurfer Options below for more configuration options.
+
+app.component.ts
+```
+mp3url = 'https://www.kennethcaple.com/api/mp3/richinlovemutedguitarechoing.mp3';
+
+constructor(public waveService: WaveService) {}
+
+ngAfterViewInit() {
+  this.wave = this.waveService.create({container: '#waveservice'});
+  this.wave.load(this.mp3url);
+}
+```
+app.component.html
+```
+<div id="waveservice"></div>
+<button (click)="wave.play()">Play</button>
+<button (click)="wave.pause()">Pause</button>
+```
+
+
+### Wavesurfer Component: a ready to go waveform component.
+You can use the included <b>wavesurfer</b> click-to-play component anywhere in your app.  It requires a URL to an audio file.  Be sure to add the single quotes within the double quotes, if the track URL is not bound to a variable.
 ```
 <wavesurfer [trackurl]="'https://www.kennethcaple.com/api/mp3/richinlovemutedguitarechoing.mp3'"></wavesurfer>
 ```
