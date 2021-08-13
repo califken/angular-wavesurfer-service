@@ -16,11 +16,7 @@ export class AngularWavesurferService {
   waves = {};
 
   constructor(public gmcs: GlobalMediaControlService) {
-    this.gmcs.playbackCommand$.subscribe(cmd => {
-      if (this.waves[this.thisuuid] && this.waves[this.thisuuid].isPlaying()) {
-        this.waves[this.thisuuid].stop();
-      }
-    });
+
   }
   load(trackurl: string, wavesurferOptions?: AngularWavesurferServiceOptions) {
     if (wavesurferOptions && wavesurferOptions.container) {
@@ -49,16 +45,24 @@ export class AngularWavesurferService {
         ...wavesurferOptions
       });
       this.waves[this.thisuuid].load(trackurl);
+      this.gmcs.playbackCommand$.subscribe(cmd => {
+        try {
+          if (this.waves[this.thisuuid] && this.waves[this.thisuuid].isPlaying()) {
+            this.waves[this.thisuuid].stop();
+          }
+        } catch (error) {}
+      });
     });
   }
   public play() {
-    if (this.waves[this.thisuuid] && this.waves[this.thisuuid].isPlaying()) {
-      this.gmcs.stopAll();
-      this.waves[this.thisuuid].stop();
-    } else {
-      this.gmcs.stopAll();
-      this.waves[this.thisuuid].playPause();
-    }
+    try {
+      if (this.waves[this.thisuuid] && this.waves[this.thisuuid].isPlaying()) {
+        this.gmcs.stopAll();
+      } else {
+        this.gmcs.stopAll();
+        this.waves[this.thisuuid].playPause();
+      }
+    } catch (error) {}
   }
 
   generateUUID() {
