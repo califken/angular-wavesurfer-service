@@ -14,6 +14,9 @@ export class WstestComponent implements AfterViewInit {
     this.wsservice.load('https://www.kennethcaple.com/api/mp3/richinlovemutedguitarechoing.mp3', {container: '#myid'});
   }
 
+  play() {
+    this.wsservice.play();
+  }
 
   ngOnDestroy() {
     this.wsservice.destroy();
