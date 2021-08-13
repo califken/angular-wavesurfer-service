@@ -1,21 +1,2 @@
-<wavesurfer id="wavesurfer1" [trackurl]="'https://www.kennethcaple.com/api/mp3/richinlovemutedguitarechoing.mp3'"
-  [wavesurferOptions]="{backgroundColor: 'rgba(255,255,255,.2)',waveColor:'rgba(0,255,255,.5)'}"></wavesurfer>
-
-<wavesurfer id="wavesurfer2" [trackurl]="'https://www.kennethcaple.com/api/mp3/richinlovemutedguitarechoing.mp3'"
-  [wavesurferOptions]="{backgroundColor: 'black',waveColor:'red',cursorColor:'red'}"></wavesurfer>
-
-<wavesurfer id="wavesurfer3" [trackurl]="'https://www.kennethcaple.com/api/mp3/richinlovemutedguitarechoing.mp3'">
-</wavesurfer>
-
-<wavesurfer id="wavesurfer4" [trackurl]="'https://www.kennethcaple.com/api/mp3/richinlovemutedguitarechoing.mp3'"
-  [wavesurferOptions]="wavesurferOptions4"></wavesurfer>
-
-<wavesurfer id="wavesurfer5" [trackurl]="'https://www.kennethcaple.com/api/mp3/richinlovemutedguitarechoing.mp3'"
-  [wavesurferOptions]="wavesurferOptions5"></wavesurfer>
-<div *ngFor="let mp3 of mp3s$ | async">
-
-<wavesurfer id="wavesurfer5" [trackurl]="'https://www.kennethcaple.com/api/mp3/richinlovemutedguitarechoing.mp3'"
-[wavesurferOptions]="wavesurferOptions5"></wavesurfer>
-</div>
-<button (click)="addMp3('https://www.kennethcaple.com/api/mp3/w.mp3')">
-Add</button>
+<app-wavetest></app-wavetest>
+<app-wstest></app-wstest>
