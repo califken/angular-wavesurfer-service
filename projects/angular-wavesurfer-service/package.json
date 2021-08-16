@@ -1,0 +1,26 @@
+{
+  "name": "angular-wavesurfer-service",
+  "version": "1.1.22",
+  "license": "BSD-3",
+  "description": "This library provides wavesurfer.js as an Angular service and component.",
+  "keywords": [
+    "wavesurfer",
+    "angular",
+    "service",
+    "component",
+    "audio",
+    "music",
+    "player",
+    "waveform"
+  ],
+  "author": "Kenneth Caple <kennethcaple@gmail.com> (https://www.kennethcaple.com/)",
+  "peerDependencies": {
+    "@angular/common": "^11.2.14",
+    "@angular/core": "^11.2.14",
+    "@types/wavesurfer.js": "^5.1.0",
+    "wavesurfer.js": "^5.1.0"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}
