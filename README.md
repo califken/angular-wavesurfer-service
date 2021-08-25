@@ -4,9 +4,19 @@ This library provides wavesurfer.js as an Angular service and component.
 
 Wavesurfer.js is a customizable audio waveform visualization, built on top of Web Audio API and HTML5 Canvas.  With wavesurfer.js you can create anything from an HTML5 audio player to a sophisticated DJ application.
 
-## Demo
+## Examples
 
-Try this out on [stackblitz](https://stackblitz.com/edit/angular-wavesurfer-service?file=src/app/app.component.ts)
+### WaveService
+
+- [Base Template](https://stackblitz.com/edit/angular-wavesurfer-service-example-base-template) - Minimum required code to get up and running
+
+- [Player with Controls](https://stackblitz.com/edit/angular-wavesurfer-service-example-controls) - Play, pause and stop
+- [Dynamic Control Classes](https://stackblitz.com/edit/angular-wavesurfer-service-example-dynamic-control-classes) - Add classes to indicate the playback state
+- [Current Time Display](https://stackblitz.com/edit/angular-wavesurfer-service-example-current-time-display) - Display the current progress of playback
+- [Multiple Players from .json File](https://stackblitz.com/edit/angular-wavesurfer-service-example-multiple-players-from-json?file=src/app/waveform/waveform.component.ts)
+
+### Wavesurfer Component
+- [Wavesurfer Component](https://stackblitz.com/edit/angular-wavesurfer-service?file=src/app/app.component.ts)
 
 ## Installation
 
